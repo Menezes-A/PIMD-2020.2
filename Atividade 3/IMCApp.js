@@ -23,16 +23,15 @@ export class IMCApp extends Component {
     render() {
         return (
            <View style={style.container}>
-               <View style={style.entradas}>
+                <View style={style.entradas}>
                    <TextInput  style ={style.input} placeholder="Peso" keyboardType="numeric" onChangeText={(peso) => this.setState({pesoMudado:peso})}> 
                    </TextInput>
                    <TextInput  style ={style.input} placeholder="Altura" keyboardType="numeric" onChangeText={(altura) => this.setState({alturaMudado:altura})}>
                    </TextInput>
-                </View>
-                <TouchableOpacity style={style.button} onPress={() => this.calcular()}>
-                    <Text style={style.buttonText}> CALCULAR </Text>
-                </TouchableOpacity>{/*função anonima*/}
-                <IMCCalc peso={this.state.pesoEstado} altura={this.state.alturaEstado}></IMCCalc> {/*hierarquia*/}
+                </View> 
+                <Button title="Calcular" onPress={()=>this.calcular()}></Button>
+               <IMCCalc peso={this.state.pesoEstado} altura={this.state.alturaEstado}></IMCCalc> 
+       
            </View>  
         )
     }
@@ -51,17 +50,17 @@ const style = StyleSheet.create({
         marginTop:24,
       },
     
-    button:{
-        backgroundColor:'#23BAC4',
-    },
+//     button:{
+//         backgroundColor:'#23BAC4',
+//     },
 
-    buttonText:{
-        fontSize:50,
-        textAlign: 'center',
-        padding:30,
-        fontSize:30,
-        fontWeight:'bold',
-    }
-});
+//     buttonText:{
+//         fontSize:50,
+//         textAlign: 'center',
+//         padding:30,
+//         fontSize:30,
+//         fontWeight:'bold',
+//     }
+ });
 
 export default IMCApp
