@@ -1,11 +1,17 @@
 import React from 'react';
+import { View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import RotaGeral from './Atividade 4/componentes/Rotas';
+import AlbumList from './Atividade 5/src/componentes/AlbumList';
+import Header from './Atividade 5/src/componentes/Header';
+import RotaSistema from './Atividade 5/src/componentes/Routes';
 
 export default function App() {
   return (
     <SafeAreaProvider>
-      <RotaGeral></RotaGeral>
+      <RotaSistema>
+      </RotaSistema>
     </SafeAreaProvider>
+
   )
 };
+
